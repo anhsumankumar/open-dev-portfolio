@@ -23,7 +23,8 @@ Features a fully functional backend and an admin dashboard to manage your projec
 ### Admin Dashboard
 ![Admin Dashboard](public/images/admin_page.png)
 
-*(Video walkthrough coming soon...)*
+### Video Walkthrough
+<video src="public/video/video.mp4" width="100%" controls></video>
 
 ## Setup Instructions
 
