@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './EditorialHero.css';
 import HeroStats from './HeroStats';
 import EditorialImage from './EditorialImage';
+import portfolioData from '../config/portfolio.json';
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -16,14 +17,13 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-title reveal reveal-up delay-200">
-          Anshuman<br />Kumar
+          {portfolioData.firstName}<br />{portfolioData.lastName}
         </h1>
 
         <div className="hero-description reveal reveal-up delay-300">
           <p className="primary-desc">Engineer, Builder, Problem Solver.</p>
           <p className="secondary-desc">
-            I build real-world systems across<br />
-            software, AI, electronics and automation.
+            {portfolioData.bio.paragraphs[0]}
           </p>
         </div>
 

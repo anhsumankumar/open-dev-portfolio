@@ -1,29 +1,6 @@
 import React from 'react';
 import './EditorialExperience.css';
-
-const EXPERIENCES = [
-  {
-    id: 1,
-    role: "Full Stack Developer",
-    company: "Freelance",
-    period: "2023 - Present",
-    description: "Developing custom web applications, e-commerce solutions, and administrative dashboards for various clients using modern web technologies.",
-  },
-  {
-    id: 2,
-    role: "Project Lead",
-    company: "SDCET Connect",
-    period: "2023 - 2024",
-    description: "Led a team of students in developing a comprehensive digital ecosystem for the college community, focusing on architecture and deployment.",
-  },
-  {
-    id: 3,
-    role: "Electronics Hobbyist",
-    company: "Personal Projects",
-    period: "2021 - Present",
-    description: "Designing and building embedded systems, IoT devices, and automated hardware projects.",
-  }
-];
+import portfolioData from '../config/portfolio.json';
 
 export default function Experience() {
   return (
@@ -32,7 +9,7 @@ export default function Experience() {
         <h2 className="section-title">Experience</h2>
         
         <div className="experience-timeline">
-          {EXPERIENCES.map((exp) => (
+          {portfolioData.experience.map((exp) => (
             <div key={exp.id} className="timeline-item">
               <div className="timeline-meta">
                 <span className="timeline-period">{exp.period}</span>

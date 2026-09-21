@@ -80,62 +80,22 @@ export default function TerminalHero() {
             <div className="t-status-item">[○] IMPACT</div>
           </div>
         </div>
+        </div>
 
-      </div>
-
-      {/* METRICS PANEL */}
-      <div className="t-metrics-panel reveal reveal-up delay-200">
-        {/* Empty left box to align with t-hero-left */}
-        <div className="t-hero-left-metric" style={{ width: '160px', minWidth: '160px', borderRight: '1px solid var(--t-border)', position: 'relative' }}>
-          
-        </div>
-                <div className="t-metric-box">
-          <div className="t-metric-icon svg-grid"></div>
-          <div className="t-metric-data">
-            <div className="t-metric-val">{numProjects}</div>
-            <div className="t-metric-lbl">PROJECTS</div>
-          </div>
-        </div>
-        
-        <div className="t-metric-box">
-          <div className="t-metric-icon svg-nodes"></div>
-          <div className="t-metric-data">
-            <div className="t-metric-val">{numDomains}</div>
-            <div className="t-metric-lbl">DOMAINS</div>
-          </div>
-        </div>
-        
-        <div className="t-metric-box">
-          <div className="t-metric-icon svg-target"></div>
-          <div className="t-metric-data">
-            <div className="t-metric-val">1</div>
-            <div className="t-metric-lbl">GOAL</div>
-          </div>
-        </div>
-        
-        <div className="t-metric-box">
-          <div className="t-metric-icon svg-infinity"></div>
-          <div className="t-metric-data">
-            <div className="t-metric-val">∞</div>
-            <div className="t-metric-lbl">CURIOSITY</div>
-          </div>
-        </div>
-        
-        <div className="t-metric-box t-metric-msg">
-          ENGINEERING<br/>A BRIGHTER<br/>TOMORROW.
-          <span className="t-orange" style={{marginLeft: 'auto'}}>&rarr;</span>
+        <div className="t-hero-actions delay-5 mt-3">
+          <a href="#projects" className="t-btn-primary">[ EXECUTE: view_projects.sh ]</a>
+          <a href="#contact" className="t-btn-secondary">--contact-flag</a>
         </div>
       </div>
-
-      {/* BOTTOM STRIP */}
-      <div className="t-bottom-strip reveal reveal-up delay-300">
-        <span></span>
-        <div className="t-progress-line">
-          <span>|</span><span>|</span><span>|</span><span>|</span>
+      
+      <div className="t-hero-image-wrapper delay-6">
+        <div className="t-hero-image-container">
+          <div className="t-portrait-placeholder">
+            {portfolioData.firstName.toUpperCase()}<br/>{portfolioData.lastName.toUpperCase()}<span className="t-orange">_</span>
+          </div>
+          <div className="t-image-overlay"></div>
         </div>
-        <span>// KEEP_BUILDING</span>
       </div>
-
-    </div>
+    </section>
   );
 }

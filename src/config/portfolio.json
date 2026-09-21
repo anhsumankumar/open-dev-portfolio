@@ -1,0 +1,59 @@
+{
+  "name": "Anshuman Kumar",
+  "firstName": "Anshuman",
+  "lastName": "Kumar",
+  "email": "anshumankumartech07@gmail.com",
+  "bio": {
+    "paragraphs": [
+      "I am a multidisciplinary engineer focused on building robust, scalable systems that solve real-world problems. With a background spanning software development, artificial intelligence, and electronics, I thrive at the intersection of hardware and software.",
+      "My approach to engineering is rooted in first principles thinking. Whether I'm architecting a cloud backend, developing a fluid user interface, or designing an embedded system, I prioritize clean code, performance, and an exceptional user experience.",
+      "Currently, I'm focused on developing applications that leverage modern web technologies and AI to create intuitive digital ecosystems."
+    ]
+  },
+  "socials": {
+    "github": "https://github.com/anhsumankumar",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com"
+  },
+  "experience": [
+    {
+      "id": 1,
+      "role": "Full Stack Developer",
+      "company": "Freelance",
+      "period": "2023 - Present",
+      "description": "Developing custom web applications, e-commerce solutions, and administrative dashboards for various clients using modern web technologies."
+    },
+    {
+      "id": 2,
+      "role": "Project Lead",
+      "company": "SDCET Connect",
+      "period": "2023 - 2024",
+      "description": "Led a team of students in developing a comprehensive digital ecosystem for the college community, focusing on architecture and deployment."
+    },
+    {
+      "id": 3,
+      "role": "Electronics Hobbyist",
+      "company": "Personal Projects",
+      "period": "2021 - Present",
+      "description": "Designing and building embedded systems, IoT devices, and automated hardware projects."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Frontend Development",
+      "items": ["React", "Next.js", "JavaScript (ES6+)", "HTML5/CSS3", "Tailwind CSS", "Framer Motion"]
+    },
+    {
+      "title": "Backend & Cloud",
+      "items": ["Node.js", "Express", "Python", "Supabase", "Firebase", "PostgreSQL", "REST APIs"]
+    },
+    {
+      "title": "Hardware & Electronics",
+      "items": ["C/C++", "Arduino", "Raspberry Pi", "IoT Protocols", "PCB Design Basics"]
+    },
+    {
+      "title": "Tools & Methodologies",
+      "items": ["Git", "GitHub Actions", "Docker", "Agile/Scrum", "Figma"]
+    }
+  ]
+}

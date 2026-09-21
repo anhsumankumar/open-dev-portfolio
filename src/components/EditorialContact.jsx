@@ -1,5 +1,6 @@
 import React from 'react';
 import './EditorialContact.css';
+import portfolioData from '../config/portfolio.json';
 
 export default function Contact() {
   return (
@@ -11,21 +12,19 @@ export default function Contact() {
             Currently open for new opportunities and interesting collaborations.
           </p>
 
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anshumankumartech07@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-email">
-            anshumankumartech07@gmail.com
+          <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${portfolioData.email}`} target="_blank" rel="noopener noreferrer" className="contact-email">
+            {portfolioData.email}
           </a>
 
           <div className="contact-socials">
-            <a href="https://github.com/anhsumankumar" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://x.com/anhsumankumar" target="_blank" rel="noopener noreferrer">X(Twitter)</a>
-            <a href="https://www.instagram.com/anshumankumar0007/" target="_blank" rel="noopener noreferrer">Instagram</a>
-
+            <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href={portfolioData.socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href={portfolioData.socials.twitter} target="_blank" rel="noopener noreferrer">X(Twitter)</a>
           </div>
         </div>
 
         <div className="contact-footer">
-          <p>&copy; {new Date().getFullYear()} Anshuman Kumar. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {portfolioData.name}. All rights reserved.</p>
           <a href="#top" className="back-to-top">Back to top ↑</a>
         </div>
       </div>

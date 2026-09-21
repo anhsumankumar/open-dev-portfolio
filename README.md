@@ -21,6 +21,13 @@ If you just cloned this repository, follow these steps to get your portfolio up 
 npm install
 ```
 
+### 2. Customize the Template
+Run the interactive setup script to easily replace the placeholder name and links with your own:
+```bash
+npm run setup
+```
+*(You can also manually edit `src/config/portfolio.json` later to add your skills and experience).*
+
 ### 2. Set up Supabase
 This portfolio requires a free [Supabase](https://supabase.com) project to store your project data and images.
 
