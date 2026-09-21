@@ -1,3 +1,4 @@
+# Premium Developer Portfolio by @anhsumankumar (Anshuman Kumar)
 # Premium Developer Portfolio
 
 A modern, high-performance, and beautifully designed developer portfolio built with React, Vite, and Supabase. 
