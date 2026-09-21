@@ -1,0 +1,153 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 4rem 4rem 4rem;
+  width: 100%;
+  flex: 1;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.section-indicator {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.section-indicator .current {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.section-indicator .separator {
+  color: #ccc;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 9.5rem;
+  line-height: 0.95;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.hero-description {
+  margin-bottom: 3rem;
+}
+
+.primary-desc {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.secondary-desc {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #333333;
+}
+
+.btn-primary .arrow {
+  margin-left: 0.75rem;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .arrow {
+  transform: translateX(4px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.hero-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem;
+  }
+  
+  .hero-left {
+    padding-right: 0;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  .hero-right {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

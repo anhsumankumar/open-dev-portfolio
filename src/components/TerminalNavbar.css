@@ -1,0 +1,73 @@
+.t-nav-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.t-nav-top-strip {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: var(--t-text-secondary);
+  border-bottom: 1px solid var(--t-border-subtle);
+}
+
+.t-nav-info { display: flex; gap: 1rem; }
+.t-nav-sys { letter-spacing: 0.05em; }
+
+.t-nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--t-border);
+}
+
+.t-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.t-logo {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  transform: skewX(-10deg);
+  margin-left: 1rem;
+  color: var(--t-text-primary);
+  text-shadow: 2px 2px 0 var(--t-orange);
+}
+
+.t-role {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--t-text-secondary);
+}
+
+.t-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.t-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.t-links a {
+  font-size: 0.85rem;
+  color: var(--t-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.t-links a:hover { color: var(--t-text-primary); }
+.t-links a.active { color: var(--t-orange); }
+
+@media (max-width: 1024px) {
+  .t-nav-main { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+  .t-links { flex-wrap: wrap; }
+}

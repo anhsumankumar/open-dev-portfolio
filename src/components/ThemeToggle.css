@@ -1,0 +1,36 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border-color, rgba(0,0,0,0.1));
+  border-radius: 4px;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+[data-theme="terminal"] .theme-toggle {
+  border-color: #FF6A00;
+  color: #8A8A8A;
+}
+
+.theme-toggle .active {
+  font-weight: 600;
+  color: var(--text-primary, #000);
+}
+
+[data-theme="terminal"] .theme-toggle .active {
+  color: #FF6A00;
+}
+
+.theme-toggle .inactive {
+  opacity: 0.5;
+}
+
+.theme-toggle .divider {
+  opacity: 0.3;
+}

@@ -1,0 +1,47 @@
+
+/* --- GLOBAL SCROLL REVEAL ANIMATIONS --- */
+.reveal {
+  opacity: 0;
+  will-change: transform, opacity, filter;
+  transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+}
+
+.reveal-up { transform: translateY(40px); }
+.reveal-up.is-visible { transform: translateY(0); }
+
+.reveal-left { transform: translateX(40px); }
+.reveal-left.is-visible { transform: translateX(0); }
+
+.reveal-right { transform: translateX(-40px); }
+.reveal-right.is-visible { transform: translateX(0); }
+
+.reveal-scale { transform: scale(0.95); }
+.reveal-scale.is-visible { transform: scale(1); }
+
+.reveal-blur { filter: blur(8px); }
+.reveal-blur.is-visible { filter: blur(0); }
+
+/* Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+/* --- TEXT GRADIENT REVEAL --- */
+.text-shimmer {
+  background: linear-gradient(to right, var(--text-h) 20%, var(--text) 40%, var(--text) 60%, var(--text-h) 80%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}

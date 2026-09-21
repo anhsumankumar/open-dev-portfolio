@@ -1,0 +1,145 @@
+.projects-section {
+  padding: 8rem 2rem;
+  background-color: var(--bg-color-dark);
+  min-height: 50vh;
+}
+
+.projects-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  margin-bottom: 6rem;
+  max-width: 800px;
+}
+
+.projects-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.projects-title {
+  font-family: 'Montserrat', serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: var(--text-main);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.projects-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.projects-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-light);
+  width: 100%;
+}
+
+.projects-content-wrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Sidebar Decor */
+.projects-sidebar-decor {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .projects-sidebar-decor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    flex-shrink: 0;
+    gap: 2rem;
+    opacity: 0.4;
+  }
+
+  .decor-line {
+    width: 1px;
+    flex-grow: 1;
+    background-color: var(--text-muted);
+  }
+
+  .decor-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .decor-symbols {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: 'Space Mono', monospace;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+}
+
+.project-grid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+.projects-loading, .projects-empty, .projects-error {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: var(--text-muted);
+  background-color: transparent;
+  border: 1px dashed var(--border-light);
+}
+
+.projects-error {
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.error-details {
+  margin-top: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-light);
+  border-radius: 50%;
+  border-top-color: var(--text-main);
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

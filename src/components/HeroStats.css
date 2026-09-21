@@ -1,0 +1,104 @@
+.hero-stats-wrapper {
+  position: relative;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.stat-item.interactive {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.stat-item.interactive:hover {
+  opacity: 0.7;
+}
+
+.stat-value {
+  font-family: var(--sans);
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chevron {
+  font-size: 0.6rem;
+  color: var(--text-primary);
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--border-color);
+}
+
+/* Domains Dropdown */
+.domains-dropdown {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.domain-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.domain-name {
+  font-family: var(--heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.domain-desc {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .domains-dropdown {
+    padding: 1.5rem;
+  }
+}
