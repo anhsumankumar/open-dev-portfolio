@@ -24,7 +24,7 @@ Features a fully functional backend and an admin dashboard to manage your projec
 ![Admin Dashboard](public/images/admin_page.png)
 
 ### Video Walkthrough
-<video src="public/video/video.mp4" width="100%" controls></video>
+https://github.com/anhsumankumar/open-dev-portfolio/raw/main/public/video/video.mp4
 
 ## Setup Instructions
 
