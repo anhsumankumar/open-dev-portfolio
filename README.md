@@ -13,6 +13,18 @@ Features a fully functional backend and an admin dashboard to manage your projec
 - 🔒 **Admin Dashboard**: Secure `/admin` route to add, edit, and publish your projects.
 - 🖼️ **Image Hosting**: Direct upload to Supabase Storage.
 
+## Screenshots
+### Editorial Theme
+![Editorial Theme](/images/Editorial_theme.png)
+
+### Terminal Theme
+![Terminal Theme](/images/terminal_theme.png)
+
+### Admin Dashboard
+![Admin Dashboard](/images/admin_page.png)
+
+*(Video walkthrough coming soon...)*
+
 ## Setup Instructions
 
 If you just cloned this repository, follow these steps to get your portfolio up and running.
