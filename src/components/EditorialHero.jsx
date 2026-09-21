@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './EditorialHero.css';
+import './Hero.css';
 import HeroStats from './HeroStats';
 import EditorialImage from './EditorialImage';
 import portfolioData from '../config/portfolio.json';

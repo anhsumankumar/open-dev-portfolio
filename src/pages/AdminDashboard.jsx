@@ -89,29 +89,34 @@ export default function AdminDashboard() {
                       <td>{project.status}</td>
                       <td>{project.sort_order}</td>
                       <td>
-                        <button 
-                          onClick={() => handlePublishToggle(project)}
-                          className={`admin-btn ${project.published ? 'admin-btn-secondary' : ''}`}
-                          style={{padding: '0.25rem 0.5rem', fontSize: '0.875rem'}}
-                        >
-                          {project.published ? 'Unpublish' : 'Publish'}
-                        </button>
+                        <span className={`status-badge ${project.published ? 'published' : 'draft'}`}>
+                          {project.published ? 'Published' : 'Draft'}
+                        </span>
                       </td>
                       <td>
-                        <Link 
-                          to={`/admin/projects/${project.id}/edit`}
-                          className="admin-btn admin-btn-secondary"
-                          style={{marginRight: '0.5rem', padding: '0.25rem 0.5rem', fontSize: '0.875rem'}}
-                        >
-                          Edit
-                        </Link>
-                        <button 
-                          onClick={() => handleDelete(project.id)}
-                          className="admin-btn admin-btn-danger"
-                          style={{padding: '0.25rem 0.5rem', fontSize: '0.875rem'}}
-                        >
-                          Delete
-                        </button>
+                        <div className="admin-actions">
+                          <button 
+                            onClick={() => handlePublishToggle(project)}
+                            className="admin-btn admin-btn-secondary"
+                            style={{padding: '0.4rem 0.75rem', fontSize: '0.8rem'}}
+                          >
+                            {project.published ? 'Unpublish' : 'Publish'}
+                          </button>
+                          <Link 
+                            to={`/admin/projects/${project.id}/edit`}
+                            className="admin-btn admin-btn-secondary"
+                            style={{padding: '0.4rem 0.75rem', fontSize: '0.8rem'}}
+                          >
+                            Edit
+                          </Link>
+                          <button 
+                            onClick={() => handleDelete(project.id)}
+                            className="admin-btn admin-btn-danger"
+                            style={{padding: '0.4rem 0.75rem', fontSize: '0.8rem'}}
+                          >
+                            Delete
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))

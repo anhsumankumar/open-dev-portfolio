@@ -1,5 +1,5 @@
 import React from 'react';
-import './EditorialContact.css';
+import './Contact.css';
 import portfolioData from '../config/portfolio.json';
 
 export default function Contact() {

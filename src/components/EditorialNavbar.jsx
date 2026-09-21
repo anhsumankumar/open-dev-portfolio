@@ -1,6 +1,7 @@
 import React from 'react';
 import './EditorialNavbar.css';
 import ThemeToggle from './ThemeToggle';
+import portfolioData from '../config/portfolio.json';
 
 export default function Navbar() {
   return (
@@ -20,7 +21,7 @@ export default function Navbar() {
       
       <div className="nav-right">
         <ThemeToggle />
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anshumankumartech07@gmail.com" target="_blank" rel="noopener noreferrer" className="build-link">Let's Build</a>
+        <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${portfolioData.email}`} target="_blank" rel="noopener noreferrer" className="build-link">Let's Build</a>
         <span className="indicator"></span>
       </div>
     </nav>

@@ -2,6 +2,8 @@ import React from 'react';
 import { useResume } from '../hooks/useResume';
 import './TerminalProjectGrid.css';
 
+import portfolioData from '../config/portfolio.json';
+
 export default function TerminalAbout() {
   const { resumeData } = useResume();
   return (
@@ -12,7 +14,7 @@ export default function TerminalAbout() {
       </div>
       <div className="t-content-block" style={{ color: 'var(--t-text-secondary)', lineHeight: 1.8 }}>
         <p>&gt; RUNNING IDENTIFICATION_PROTOCOL...</p>
-        <p>&gt; MATCH FOUND: ANSHUMAN KUMAR.</p>
+        <p>&gt; MATCH FOUND: {portfolioData.firstName.toUpperCase()} {portfolioData.lastName.toUpperCase()}.</p>
 
           {resumeData?.profile_image_url && (
             <div style={{ marginBottom: '2rem', display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>
@@ -33,22 +35,11 @@ export default function TerminalAbout() {
           )}
   
         <div style={{ marginTop: '1.5rem' }}>
-            <p style={{marginBottom: '1rem'}}>
-              &gt; I am a multidisciplinary engineer focused on building robust, scalable 
-              systems that solve real-world problems. With a background spanning software 
-              development, artificial intelligence, and electronics, I thrive at the 
-              intersection of hardware and software.
+          {portfolioData.bio.paragraphs.map((paragraph, index) => (
+            <p key={index} style={{marginBottom: '1rem'}}>
+              &gt; {paragraph}
             </p>
-            <p style={{marginBottom: '1rem'}}>
-              &gt; My approach to engineering is rooted in first principles thinking. Whether 
-              I'm architecting a cloud backend, developing a fluid user interface, or 
-              designing an embedded system, I prioritize clean code, performance, and 
-              an exceptional user experience.
-            </p>
-            <p>
-              &gt; Currently, I'm focused on developing applications that leverage modern 
-              web technologies and AI to create intuitive digital ecosystems.
-            </p>
+          ))}
         </div>
       </div>
     </div>

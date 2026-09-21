@@ -1,5 +1,5 @@
 import React from 'react';
-import './EditorialSkills.css';
+import './Skills.css';
 import portfolioData from '../config/portfolio.json';
 
 export default function Skills() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useResume } from '../hooks/useResume';
-import './EditorialAbout.css';
+import portfolioData from '../config/portfolio.json';
+import './About.css'; // Updated CSS name
 
 export default function About() {
   const { resumeData } = useResume();
@@ -11,22 +12,9 @@ export default function About() {
         
         <div className="about-content">
           <div className="about-text">
-            <p>
-              I am a multidisciplinary engineer focused on building robust, scalable 
-              systems that solve real-world problems. With a background spanning software 
-              development, artificial intelligence, and electronics, I thrive at the 
-              intersection of hardware and software.
-            </p>
-            <p>
-              My approach to engineering is rooted in first principles thinking. Whether 
-              I'm architecting a cloud backend, developing a fluid user interface, or 
-              designing an embedded system, I prioritize clean code, performance, and 
-              an exceptional user experience.
-            </p>
-            <p>
-              Currently, I'm focused on developing applications that leverage modern 
-              web technologies and AI to create intuitive digital ecosystems.
-            </p>
+            {portfolioData.bio.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
           <div className="about-image-wrapper">
             {/* Placeholder for a portrait or abstract graphic */}
@@ -34,7 +22,9 @@ export default function About() {
               <img src={resumeData.profile_image_url} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             ) : (
               <div className="about-image-placeholder">
-                <span className="about-image-text">AK</span>
+                <span className="about-image-text">
+                  {portfolioData.firstName.charAt(0)}{portfolioData.lastName.charAt(0)}
+                </span>
               </div>
             )}
           </div>

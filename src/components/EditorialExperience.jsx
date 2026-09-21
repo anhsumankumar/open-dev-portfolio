@@ -1,5 +1,5 @@
 import React from 'react';
-import './EditorialExperience.css';
+import './Experience.css';
 import portfolioData from '../config/portfolio.json';
 
 export default function Experience() {
