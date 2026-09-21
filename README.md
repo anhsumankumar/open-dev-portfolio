@@ -15,13 +15,13 @@ Features a fully functional backend and an admin dashboard to manage your projec
 
 ## Screenshots
 ### Editorial Theme
-![Editorial Theme](/images/Editorial_theme.png)
+![Editorial Theme](public/images/Editorial_theme.png)
 
 ### Terminal Theme
-![Terminal Theme](/images/terminal_theme.png)
+![Terminal Theme](public/images/terminal_theme.png)
 
 ### Admin Dashboard
-![Admin Dashboard](/images/admin_page.png)
+![Admin Dashboard](public/images/admin_page.png)
 
 *(Video walkthrough coming soon...)*
 
