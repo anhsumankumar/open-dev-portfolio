@@ -24,9 +24,7 @@ Features a fully functional backend and an admin dashboard to manage your projec
 ![Admin Dashboard](public/images/admin_page.png)
 
 ### Video Walkthrough
-<video src="https://raw.githubusercontent.com/anhsumankumar/open-dev-portfolio/main/public/video/video.mp4" controls="controls" muted="muted" style="max-height: 640px; width: 100%;">
-  Your browser does not support the video tag.
-</video>
+*(Upload your video directly on GitHub Web to embed it here!)*
 
 ## Setup Instructions
 
