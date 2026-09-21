@@ -135,6 +135,7 @@
     justify-content: center;
     min-height: 100vh;
     background-color: var(--admin-bg);
+    color: var(--admin-text-primary);
     font-family: var(--admin-font);
     background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
     background-size: 24px 24px;
@@ -161,6 +162,7 @@
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: -0.03em;
+    color: var(--admin-text-primary);
   }
   
   .admin-login-card p {
