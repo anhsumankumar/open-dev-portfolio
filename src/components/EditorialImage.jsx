@@ -1,7 +1,10 @@
 import React from 'react';
 import './EditorialImage.css';
+import { useProfileData } from '../context/ProfileContext';
 
 export default function EditorialImage() {
+  const profile = useProfileData();
+  const initials = (profile.firstName?.[0] || 'A') + (profile.lastName?.[0] || 'K');
   return (
     <div className="image-section image-reveal">
       <div className="image-container">
@@ -31,7 +34,7 @@ export default function EditorialImage() {
         </ul>
         <div className="side-line"></div>
         <div className="side-footer">
-          AK / 2025
+          {initials} / {new Date().getFullYear()}
         </div>
       </div>
     </div>

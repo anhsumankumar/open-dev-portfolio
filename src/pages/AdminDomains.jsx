@@ -66,6 +66,7 @@ export default function AdminDomains() {
           <Link to="/admin" className="admin-nav-item">Projects</Link>
           <Link to="/admin/domains" className="admin-nav-item active">Domains</Link>
           <Link to="/admin/resume" className="admin-nav-item">Resume</Link>
+          <Link to="/admin/profile" className="admin-nav-item">Profile</Link>
           <a href="/" target="_blank" rel="noopener noreferrer" className="admin-nav-item">View Site</a>
         </nav>
         <div className="admin-logout">

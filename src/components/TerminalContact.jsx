@@ -1,8 +1,9 @@
 import React from 'react';
 import './TerminalProjectGrid.css';
-import portfolioData from '../config/portfolio.json';
+import { useProfileData } from '../context/ProfileContext';
 
 export default function TerminalContact() {
+  const portfolioData = useProfileData();
   return (
     <div className="t-section reveal reveal-up" id="contact" style={{ borderTop: '1px solid var(--t-border)', paddingTop: '4rem', marginTop: '4rem' }}>
       <div className="t-section-header">
@@ -28,7 +29,7 @@ export default function TerminalContact() {
           <a href={portfolioData.socials.twitter} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--t-text-secondary)', textDecoration: 'none' }}>[ TWITTER ]</a>
         </div>
         <div>
-          &copy; {new Date().getFullYear()} {portfolioData.firstName.toUpperCase()} {portfolioData.lastName.toUpperCase()}. ALL RIGHTS RESERVED.
+          &copy; {new Date().getFullYear()} {portfolioData.firstName?.toUpperCase()} {portfolioData.lastName?.toUpperCase()}. ALL RIGHTS RESERVED.
         </div>
         <a href="#top" style={{ color: 'var(--t-orange)', textDecoration: 'none' }}>
           ^ BACK_TO_TOP

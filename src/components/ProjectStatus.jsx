@@ -9,7 +9,7 @@ const STATUS_CONFIG = {
 };
 
 export default function ProjectStatus({ status }) {
-  const config = STATUS_CONFIG[status] || { label: status.toUpperCase() };
+  const config = STATUS_CONFIG[status] || { label: status?.toUpperCase() };
   
   return (
     <span className="project-status">

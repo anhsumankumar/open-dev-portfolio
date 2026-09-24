@@ -22,8 +22,8 @@ export default function TerminalProjectGrid() {
                 0x{Math.random().toString(16).substr(2, 4).toUpperCase()}
               </div>
               <div className="t-proj-id">[ PRJ_{String(idx+1).padStart(3, '0')} ]</div>
-              <div className="t-proj-title">{proj.title.toUpperCase()}</div>
-              <div className="t-proj-status t-orange">STATUS: {proj.status.toUpperCase()}</div>
+              <div className="t-proj-title">{proj.title?.toUpperCase()}</div>
+              <div className="t-proj-status t-orange">STATUS: {proj.status?.toUpperCase()}</div>
               <a href={`/projects/${proj.slug}`} className="t-proj-link">&gt; EXECUTE</a>
             </div>
           ))

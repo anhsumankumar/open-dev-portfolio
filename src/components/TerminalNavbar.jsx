@@ -1,8 +1,11 @@
 import React from 'react';
 import ThemeToggle from './ThemeToggle';
 import './TerminalNavbar.css';
+import logoConfig from '../config/logo.json';
 
 export default function TerminalNavbar() {
+  const initials = logoConfig.logoText;
+
   return (
     <div className="t-nav-container t-animate">
       <div className="t-nav-top-strip">
@@ -18,7 +21,7 @@ export default function TerminalNavbar() {
       
       <div className="t-nav-main">
         <div className="t-nav-left">
-          <div className="t-logo">AK</div>
+          <div className="t-logo">{initials}</div>
           <div className="t-role">ENGINEER :: DEVELOPER :: BUILDER</div>
         </div>
         <div className="t-nav-right">

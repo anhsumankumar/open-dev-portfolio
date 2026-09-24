@@ -1,8 +1,9 @@
 import React from 'react';
 import './Contact.css';
-import portfolioData from '../config/portfolio.json';
+import { useProfileData } from '../context/ProfileContext';
 
 export default function Contact() {
+  const portfolioData = useProfileData();
   return (
     <footer className="contact-section" id="contact">
       <div className="contact-container reveal reveal-up">

@@ -84,6 +84,7 @@ export default function AdminResume() {
           <Link to="/admin" className="admin-nav-item">Projects</Link>
           <Link to="/admin/domains" className="admin-nav-item">Domains</Link>
           <Link to="/admin/resume" className="admin-nav-item active">Resume</Link>
+          <Link to="/admin/profile" className="admin-nav-item">Profile</Link>
           <a href="/" target="_blank" rel="noopener noreferrer" className="admin-nav-item">View Site</a>
         </nav>
         <div className="admin-logout">

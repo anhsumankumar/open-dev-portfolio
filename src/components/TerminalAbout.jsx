@@ -2,9 +2,10 @@ import React from 'react';
 import { useResume } from '../hooks/useResume';
 import './TerminalProjectGrid.css';
 
-import portfolioData from '../config/portfolio.json';
+import { useProfileData } from '../context/ProfileContext';
 
 export default function TerminalAbout() {
+  const portfolioData = useProfileData();
   const { resumeData } = useResume();
   return (
     <div className="t-section reveal reveal-up" id="about">
@@ -14,7 +15,7 @@ export default function TerminalAbout() {
       </div>
       <div className="t-content-block" style={{ color: 'var(--t-text-secondary)', lineHeight: 1.8 }}>
         <p>&gt; RUNNING IDENTIFICATION_PROTOCOL...</p>
-        <p>&gt; MATCH FOUND: {portfolioData.firstName.toUpperCase()} {portfolioData.lastName.toUpperCase()}.</p>
+        <p>&gt; MATCH FOUND: {portfolioData.firstName?.toUpperCase()} {portfolioData.lastName?.toUpperCase()}.</p>
 
           {resumeData?.profile_image_url && (
             <div style={{ marginBottom: '2rem', display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>

@@ -1,13 +1,16 @@
 import React from 'react';
 import './EditorialNavbar.css';
 import ThemeToggle from './ThemeToggle';
-import portfolioData from '../config/portfolio.json';
+import { useProfileData } from '../context/ProfileContext';
+import logoConfig from '../config/logo.json';
 
 export default function Navbar() {
+  const portfolioData = useProfileData();
+  const initials = logoConfig.logoText;
   return (
     <nav className="navbar fade-in-up">
       <div className="nav-left">
-        <a href="/" className="logo">AK</a>
+        <a href="/" className="logo">{initials}</a>
         <div className="divider"></div>
         <ul className="nav-links">
           <li><a href="/" className="active">Home</a></li>

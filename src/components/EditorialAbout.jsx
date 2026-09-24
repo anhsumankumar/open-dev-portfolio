@@ -1,9 +1,10 @@
 import React from 'react';
 import { useResume } from '../hooks/useResume';
-import portfolioData from '../config/portfolio.json';
+import { useProfileData } from '../context/ProfileContext';
 import './About.css'; // Updated CSS name
 
 export default function About() {
+  const portfolioData = useProfileData();
   const { resumeData } = useResume();
   return (
     <section className="about-section" id="about">

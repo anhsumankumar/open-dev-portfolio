@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index }) {
           <span className="project-number">{num}</span>
           <span className="meta-divider">—</span>
           {project.category && (
-            <span className="project-category">{project.category.toUpperCase()}</span>
+            <span className="project-category">{project.category?.toUpperCase()}</span>
           )}
           <span className="meta-divider">/</span>
           <ProjectStatus status={project.status} />

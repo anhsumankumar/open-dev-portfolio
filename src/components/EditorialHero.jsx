@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 import HeroStats from './HeroStats';
 import EditorialImage from './EditorialImage';
-import portfolioData from '../config/portfolio.json';
+import { useProfileData } from '../context/ProfileContext';
 
 export default function Hero() {
+  const portfolioData = useProfileData();
   const navigate = useNavigate();
   return (
     <main className="hero">

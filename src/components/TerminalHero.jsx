@@ -2,10 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProjects } from '../hooks/useProjects';
 import { useDomains } from '../hooks/useDomains';
-import portfolioData from '../config/portfolio.json';
+import { useProfileData } from '../context/ProfileContext';
 import './TerminalHero.css';
 
 export default function TerminalHero() {
+  const portfolioData = useProfileData();
   const navigate = useNavigate();
   const { projects, loading: projLoading } = useProjects(true);
   const { domains, loading: domLoading } = useDomains();
@@ -46,11 +47,11 @@ export default function TerminalHero() {
           </div>
           
           <h1 className="t-title">
-            {portfolioData.firstName.toUpperCase()}<br/>{portfolioData.lastName.toUpperCase()}<span className="t-orange">_</span>
+            {portfolioData.firstName?.toUpperCase()}<br/>{portfolioData.lastName?.toUpperCase()}<span className="t-orange">_</span>
           </h1>
           
           <p className="t-desc">
-            {portfolioData.bio.paragraphs[0].toUpperCase()}
+            {portfolioData.bio.paragraphs[0]?.toUpperCase()}
           </p>
           
           <div className="t-hero-actions">

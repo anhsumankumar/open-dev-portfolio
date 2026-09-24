@@ -3,6 +3,7 @@ import './styles/animations.css';
 import './styles/terminal.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import { ProfileProvider } from './context/ProfileContext';
 import Navbar from './components/Navbar';
 import TerminalIndex from './components/TerminalIndex';
 import Hero from './components/Hero';
@@ -14,6 +15,7 @@ import AdminDomains from './pages/AdminDomains';
 import ProjectEditor from './pages/ProjectEditor';
 import Resume from './pages/Resume';
 import AdminResume from './pages/AdminResume';
+import AdminProfile from './pages/AdminProfile';
 
 import About from './components/About';
 import Experience from './components/Experience';
@@ -58,6 +60,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <ProfileProvider>
     <Router>
       <Routes>
         {/* Public Routes */}
@@ -86,11 +89,13 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/domains" element={<AdminDomains />} />
         <Route path="/admin/resume" element={<AdminResume />} />
+        <Route path="/admin/profile" element={<AdminProfile />} />
             <Route path="/resume" element={<><Navbar /><Resume /></>} />
         <Route path="/admin/projects/new" element={<ProjectEditor />} />
         <Route path="/admin/projects/:id/edit" element={<ProjectEditor />} />
       </Routes>
     </Router>
+      </ProfileProvider>
     </ThemeProvider>
   );
 }
