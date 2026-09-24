@@ -1,16 +1,15 @@
-# Premium Developer Portfolio by @anhsumankumar (Anshuman Kumar)
 # Premium Developer Portfolio
 
 A modern, high-performance, and beautifully designed developer portfolio built with React, Vite, and Supabase. 
 
-Features a fully functional backend and an admin dashboard to manage your projects, images, and content dynamically.
+Features a fully functional backend and an admin dashboard to manage your profile, resume, projects, and images dynamically without touching the code.
 
 ## Features
 - 🎨 **Premium Aesthetic**: Editorial-style typography and smooth micro-animations.
 - 📱 **Responsive Design**: Looks perfect on desktops, tablets, and mobile devices.
 - ⚡ **Vite + React**: Lightning-fast development and optimized production builds.
 - 🗄️ **Supabase Backend**: Complete PostgreSQL database, Auth, and Storage integration.
-- 🔒 **Admin Dashboard**: Secure `/admin` route to add, edit, and publish your projects.
+- 🔒 **Admin Dashboard**: Secure `/admin` route to add, edit, and publish your projects and profile.
 - 🖼️ **Image Hosting**: Direct upload to Supabase Storage.
 
 ## Screenshots
@@ -23,59 +22,67 @@ Features a fully functional backend and an admin dashboard to manage your projec
 ### Admin Dashboard
 ![Admin Dashboard](public/images/admin_page.png)
 
-### Video Walkthrough(Sample Video)
-https://github.com/anhsumankumar/open-dev-portfolio/blob/main/public/video/video.mp4
+## 🚀 Complete Setup Guide
 
-## Setup Instructions
-
-If you just cloned this repository, follow these steps to get your portfolio up and running.
+Follow these steps carefully to get your full-stack portfolio up and running.
 
 ### 1. Install Dependencies
+Clone the repository and install the required npm packages:
 ```bash
 npm install
 ```
 
-### 2. Customize the Template
-Run the interactive setup script to easily replace the placeholder name and links with your own:
-```bash
-npm run setup
-```
-*(You can also manually edit `src/config/portfolio.json` later to add your skills and experience).*
+### 2. Set up Supabase (Your Backend & Database)
+This portfolio requires a free [Supabase](https://supabase.com) project to store your data and images.
 
-### 2. Set up Supabase
-This portfolio requires a free [Supabase](https://supabase.com) project to store your project data and images.
-
-1. Go to Supabase and create a new project.
-2. Go to **Storage** and create a new bucket named `project-images`.
-   - **IMPORTANT:** Make sure to toggle **"Public bucket"** to ON.
-3. Go to the **SQL Editor** in Supabase.
-4. Copy the entire contents of the `database.sql` file included in this repository.
-5. Paste it into the SQL Editor and click **Run**. This will create the necessary tables, policies, and seed data.
+1. Go to [supabase.com](https://supabase.com) and create a new project.
+2. **Create Storage Buckets (CRITICAL):**
+   - In your Supabase dashboard, go to **Storage** on the left menu.
+   - Click **New Bucket**.
+   - Name it exactly: `project-images`
+   - **Important:** Toggle the **"Public bucket"** switch to **ON**.
+   - Click Save.
+   - Repeat the exact same process to create a second bucket named: `portfolio-images` (also make it Public).
+3. **Setup Database Tables & Security:**
+   - Go to the **SQL Editor** in your Supabase dashboard.
+   - Open the `database.sql` file located in your project's root folder and copy all of its contents.
+   - Paste the code into the Supabase SQL Editor and click **Run**.
+   - *Note: This script automatically sets up all your tables, Row Level Security (RLS) policies, and a trigger that automatically makes the first person who signs up an Admin!*
 
 ### 3. Configure Environment Variables
+Connect your local code to your new Supabase backend:
 1. Copy the `.env.example` file and rename it to `.env.local`:
 ```bash
 cp .env.example .env.local
 ```
-2. Open `.env.local` and add your Supabase project keys. You can find these in your Supabase dashboard under **Project Settings > API**.
+2. Open `.env.local` and add your Supabase project keys. You can find these in your Supabase dashboard under **Project Settings (gear icon) > API**.
    - `VITE_SUPABASE_URL`: Your Project URL
    - `VITE_SUPABASE_ANON_KEY`: Your Project `anon` / `public` key
 
-### 4. Create Your Admin Account
-To manage your portfolio, you need to authorize your account.
-1. In your Supabase Dashboard, go to **Authentication > Users**.
-2. Click **Add User** and create an account with your email and password.
-3. Copy the **User UID** of your new account.
-4. Go to the **Table Editor** > **`admins`** table.
-5. Click **Insert Row**, paste your User UID into the `id` column, and save.
+### 4. Set Your Navbar Logo (Offline Config)
+To change the "AK" initials in the top-left of the navbar to your own:
+- **Windows:** Double-click the `set_logo.bat` file in your project folder. It will ask you for your initials and automatically apply them.
+- **Mac/Linux:** You can manually edit the text inside `src/config/logo.json`.
 
-### 5. Run the Application
+### 5. Run the Application & Create Your Admin Account
 Start the development server:
 ```bash
 npm run dev
 ```
-- Your live portfolio will be at `http://localhost:5173/`
-- Your admin dashboard will be at `http://localhost:5173/admin/login` (Log in with the account you created in step 4).
+1. Go to `http://localhost:5173/admin/login` in your browser.
+2. You will see the login screen. Since this is your first time, you need to create an account.
+3. Go back to your Supabase Dashboard -> **Authentication** -> **Users** -> **Add User** -> **Create New User**.
+4. Enter your email and a secure password.
+5. *(Thanks to the SQL script you ran earlier, this new user is automatically granted Admin privileges).*
+6. Go back to `http://localhost:5173/admin/login` and log in with those credentials!
+
+### 6. Customize Your Portfolio
+Once logged into the Admin Dashboard, navigate to:
+- **Profile:** Fill out your Name, Bio, Social Links, Skills, and Experience.
+- **Resume:** Paste your markdown resume and upload your profile photo.
+- **Projects:** Add all your cool projects, upload cover images, and set them to "Published".
+
+Your live portfolio will instantly update at `http://localhost:5173/`!
 
 ## License
 MIT License
