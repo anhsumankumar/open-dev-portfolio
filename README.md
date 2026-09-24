@@ -2,7 +2,7 @@
 
 # 🚀 Open Dev Portfolio
 
-*A premium, high-performance, and beautifully designed developer portfolio built for modern engineers.*
+*An open-source, highly customizable React developer portfolio template designed for software engineers, computer science students, and full-stack developers. Build your personal brand with dual themes (Hacker/Terminal & Editorial), smooth animations, and a powerful Supabase backend equipped with a secure Admin Dashboard.*
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
