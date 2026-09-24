@@ -12,6 +12,11 @@ Features a fully functional backend and an admin dashboard to manage your profil
 - 🔒 **Admin Dashboard**: Secure `/admin` route to add, edit, and publish your projects and profile.
 - 🖼️ **Image Hosting**: Direct upload to Supabase Storage.
 
+## 🎯 Who is this for?
+- **Engineering & CS Students:** Stand out to recruiters with a professional, database-driven portfolio instead of a basic static site.
+- **Software Engineers & Developers:** Showcase your full-stack capabilities with a dynamic template that proves you know React, databases, and auth.
+- **Freelancers & Tech Enthusiasts:** Manage your projects effortlessly through an admin dashboard without ever touching the code again.
+
 ## Screenshots
 ### Editorial Theme
 ![Editorial Theme](public/images/Editorial_theme.png)
@@ -86,3 +91,6 @@ Your live portfolio will instantly update at `http://localhost:5173/`!
 
 ## License
 MIT License
+
+## Tags
+#Portfolio #React #Supabase #Vite #EngineeringStudent #SoftwareEngineer #FullStack #WebDevelopment #OpenSource #DeveloperPortfolio #AdminDashboard
